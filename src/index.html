@@ -9,36 +9,32 @@
   </head>
   <body>
     <h1>Daily Journal</h1>
-    <journalForm id="journalForm">
-      <form action="">
-        <fieldset>
-          <div id="Date">
-            <label for="journalDate">Date of entry</label>
-            <input type="date" name="journalDate" <input
-          </div>
-          <div id="Concepts">
-            <label for="conceptsCovered">Concepts Covered</label>
-            <input type="text" name="conceptsCovered" <input
-          </div>
-          <div id="journalEntry">
-            <label for="journalEntry">Journal Entry</label>
-            <input type="text" name="journalEntry" <input
-          </div>
-          <div id="mood">
-            <label for="mood">Mood for the day</label>
-            <select id="mood" name="mood">
-              <option value="happy">Happy!</option>
-              <option value="sad">Sad</option>
-              <option value="confused">Confused</option>
-              <option value="dontAsk">Dont Ask</option>
-            </select>
-          </div>
-          <div id="submit">
-            <label for="formSubmit">Record Journal Entry</label>
-            <input type="submit" value="Submit" />
-          </div>
-        </fieldset>
-      </form>
-    </journalForm>
+    <form action="">
+      <fieldset>
+        <div id="column">
+          <label for="journalDate" id="row">Date of entry</label>
+          <input type="date" name="journalDate" id="" /><br /><br />
+        </div>
+        <div id="column">
+          <label for="conceptsCovered" id="row">Concepts Covered</label>
+          <input type="text" name="conceptsCovered" id="" /><br /><br />
+        </div>
+        <div id="column">
+          <label for="journalEntry" id="row">Journal Entry</label>
+          <textarea name="journalEntry" id="" cols="30" rows="4"></textarea
+          ><br /><br />
+        </div>
+        <div id="column">
+          <label for="mood" id="row">Mood for the day</label>
+          <select id="" name="mood" id="row">
+            <option value="happy">Happy!</option>
+            <option value="sad">Sad</option>
+            <option value="confused">Confused</option>
+            <option value="dontAsk">Dont Ask</option> </select
+          ><br /><br />
+        </div>
+        <input type="submit" value="Record Journal Entry" />
+      </fieldset>
+    </form>
   </body>
 </html>

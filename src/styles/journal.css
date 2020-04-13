@@ -1,3 +1,10 @@
-journalForm {
+fieldset {
+  border: none;
   display: flex;
+}
+
+#column {
+  border: solid 1px black;
+  margin: 1px;
+  padding: 5px;
 }
