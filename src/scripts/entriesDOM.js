@@ -5,7 +5,9 @@ import makeJournalEntryComponent from "./entryComponent.js";
 const renderJournalEntries = (entries) => {
   for (let index = 0; index < entries.length; index++) {
     let entryLocation = document.querySelector(".entryLog");
-    entryLocation.innerHTML += makeJournalEntryComponent(entries[index]);
+    entryLocation.innerHTML += makeJournalEntryComponent.makeJournalEntryComponent(
+      entries[index]
+    );
   }
 };
 
