@@ -3,23 +3,23 @@
     {
       "id": 1,
       "date": "4/17/2020",
-      "conceptsCovered": "Daily Journal 1, GitHub practice, Flexbox",
-      "journalEntryText": "Making more progress and enjoyed working in a team",
-      "todaysMood": "Happy!"
+      "concept": "Daily Journal 1, GitHub practice, Flexbox",
+      "journal": "Making more progress and enjoyed working in a team",
+      "mood": "Happy!"
     },
     {
       "id": 2,
       "date": "4/20/2020",
-      "conceptsCovered": "JavaScript Objects, DOM manipulation",
-      "journalEntryText": "Difficult to keep up but making progress",
-      "todaysMood": "Confused"
+      "concept": "JavaScript Objects, DOM manipulation",
+      "journal": "Difficult to keep up but making progress",
+      "mood": "Confused"
     },
     {
       "id": 3,
       "date": "4/21/2020",
-      "conceptsCovered": "Manipulating the DOM, Ojbects",
-      "journalEntryText": "Today, like most days was difficult but rewarding. Must keep pushing forward!",
-      "todaysMood": "Dont Ask"
+      "concept": "Manipulating the DOM, Ojbects",
+      "journal": "Today, like most days was difficult but rewarding. Must keep pushing forward!",
+      "mood": "Dont Ask"
     }
   ]
 }
