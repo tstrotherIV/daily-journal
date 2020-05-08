@@ -2,6 +2,7 @@ import API from "./data.js";
 import renderJournalEntries from "./entriesDom.js";
 import buildJournalEntry from "./entryComponent.js";
 import makeJournalEntryComponent from "./entryComponent.js";
+import "./filterListeners.js";
 
 // API.getJournalEntries().then(renderJournalEntries);
 document.querySelector("#submit").addEventListener("click", (event) => {
@@ -47,6 +48,16 @@ function getAndRender() {
       .forEach(renderToDOM);
   });
 }
+document.querySelector("#getAllJournals").addEventListener("click", (event) => {
+  getAndRender();
+});
+document
+  .querySelector("#clearAllJournals")
+  .addEventListener("click", (event) => {
+    entryOutputContainer.innerHTML = "";
+  });
+
+export default getAndRender;
 
 // function validateForm() {
 //   var x = document.forms["myForm"]["journalEntry"].value;

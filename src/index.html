@@ -9,6 +9,7 @@
   </head>
 
   <body>
+    <section class="topBlock">
     <h1>Daily Journal</h1>
     <!-- <form name="myForm" onsubmit="return validateForm()" method="post"> -->
       <fieldset>
@@ -37,16 +38,44 @@
         <div id="column">
           <label for="mood" id="row">Mood for the day</label>
           <select id="moodEntry" name="mood" id="row">
-            <option value="happy">Happy!</option>
-            <option value="sad">Sad</option>
-            <option value="confused">Confused</option>
-            <option value="dontAsk">Dont Ask</option> </select
+            <option value="Happy!">Happy!</option>
+            <option value="Sad">Sad</option>
+            <option value="Confused">Confused</option>
+            <option value="Don't Ask">Don't Ask</option> </select
           ><br /><br />
         </div>
-        <button id="submit">Record Journal Entry</button>
       </fieldset>
     </form>
 
+    <section class="filterButtons">
+      <p>Filter Journal Entries by Mood</p>
+      <div id="filterButtons">
+        <div>
+          <input type="radio" id="filter--Happy!" name="filterButton" value="Happy!">
+          <label for="happy">Happy</label><br>
+        </div>
+        <div>
+          <input type="radio" id="filter--Sad" name="filterButton" value="Sad">
+          <label for="sad">Sad</label><br>
+        </div>
+        <div>
+          <input type="radio" id="filter--Confused" name="filterButton" value="Confused">
+          <label for="confused">Confused</label>
+        </div>
+        <div>
+          <input type="radio" id="filter--Don't Ask" name="filterButton" value="Don't Ask">
+          <label for="dontAsk">Don't Ask</label>
+        </div>
+      </div>  
+    
+    </section>
+
+    <section class="buttons">
+      <button id="submit">Record Journal Entry</button>
+      <button id="getAllJournals">See All Journals</button>
+      <button id="clearAllJournals">Clear</button>
+    </section>
+  </section>
     <section id="container"></section>
     <article class="entryLog"></article>
 

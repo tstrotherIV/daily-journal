@@ -19,7 +19,21 @@
       "date": "4/21/2020",
       "concept": "Manipulating the DOM, Ojbects",
       "journal": "Today, like most days was difficult but rewarding. Must keep pushing forward!",
-      "mood": "Dont Ask"
+      "mood": "Don't Ask"
+    },
+    {
+      "date": "2020-05-07",
+      "concept": "Deleting",
+      "journal": "worked on deleting entries in the database",
+      "mood": "Don't Ask",
+      "id": 4
+    },
+    {
+      "date": "2020-05-07",
+      "concept": "test",
+      "journal": "test",
+      "mood": "Sad",
+      "id": 5
     }
   ]
 }
