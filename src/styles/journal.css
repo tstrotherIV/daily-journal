@@ -1,10 +1,54 @@
+body {
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F564x%2Fe0%2Fec%2F79%2Fe0ec7907834967ab5b5d5464785627dc.jpg&f=1&nofb=1");
+  height: 100%;
+}
+
 fieldset {
-  border: none;
+  border: solid black 1px;
   display: flex;
+  background-color: white;
+  box-shadow: 10px 10px 15px;
+  max-width: 400px;
 }
 
 #column {
   border: solid 1px black;
   margin: 1px;
   padding: 5px;
+}
+
+.buttons {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+#submit {
+  background-color: white;
+  box-shadow: 10px 10px 15px;
+}
+
+#getAllJournals {
+  background-color: white;
+  box-shadow: 10px 10px 15px;
+}
+
+#clearAllJournals {
+  background-color: white;
+  box-shadow: 10px 10px 15px;
+}
+
+.filterButtons {
+  margin: 15px;
+  padding: 5px;
+  border: solid black 1px;
+  background-color: white;
+  box-shadow: 10px 10px 15px;
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F564x%2Fe0%2Fec%2F79%2Fe0ec7907834967ab5b5d5464785627dc.jpg&f=1&nofb=1");
+}
+
+#filterButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
