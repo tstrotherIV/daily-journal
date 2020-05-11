@@ -32,8 +32,8 @@
             id="journalEntry"
             cols="30"
             rows="4"
-          ></textarea
-          ><br /><br />
+          ></textarea>
+          <br/><br/>
         </div>
         <div id="column">
           <label for="mood" id="row">Mood for the day</label>
@@ -44,9 +44,13 @@
             <option value="Don't Ask">Don't Ask</option> </select
           ><br /><br />
         </div>
+        <section class="buttons">
+          <button id="record-journal-entry">Record Journal Entry</button>
+        </section>  
       </fieldset>
     </form>
 
+    <!--Start of Filter Form-->
     <section class="filterButtons">
       <p>Filter Journal Entries by Mood</p>
       <div id="filterButtons">
@@ -66,18 +70,49 @@
           <input type="radio" id="filter--Don't Ask" name="filterButton" value="Don't Ask">
           <label for="dontAsk">Don't Ask</label>
         </div>
-      </div>  
-    
+      </div> 
     </section>
+    <!--End of Filter Form-->
 
+    
     <section class="buttons">
-      <button id="submit">Record Journal Entry</button>
       <button id="getAllJournals">See All Journals</button>
       <button id="clearAllJournals">Clear</button>
     </section>
   </section>
-    <section id="container"></section>
-    <article class="entryLog"></article>
+
+<!--Start of Edit Section-->
+  <form action="" id="edit_form">
+    <input type="hidden" id="entryId" value="" />
+
+    <fieldset>
+      <label for="date">Date</label>
+      <input type="text" id="date">
+    </fieldset>
+    <fieldset>
+      <label for="concept">Concept</label>
+      <input type="text" id="concept">
+    </fieldset>
+    <fieldset>
+      <label for="journal">Journal Text</label>
+      <input type="text" id="journal">
+    </fieldset>
+    <fieldset>
+      <label for="mood" id="row">Mood for the day</label>
+          <select id="formMood" name="mood" id="row">
+            <option value="Happy!">Happy!</option>
+            <option value="Sad">Sad</option>
+            <option value="Confused">Confused</option>
+            <option value="Don't Ask">Don't Ask</option> 
+          </select>
+    </fieldset>
+    <button id="form-submit">Save Changes</button>
+  </form>
+  <!--End of Edit Section-->
+
+  <section id="container"></section>
+  <article class="entryLog"></article>
+  
 
     <script type="module" src="/scripts/journal.js"></script>
   </body>

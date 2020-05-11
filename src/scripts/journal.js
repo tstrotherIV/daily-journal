@@ -1,45 +1,36 @@
+// Start of Import Section
 import API from "./data.js";
 import renderJournalEntries from "./entriesDom.js";
 import buildJournalEntry from "./entryComponent.js";
 import makeJournalEntryComponent from "./entryComponent.js";
 import "./filterListeners.js";
+import "./editSubmit.js";
+import "./createEntry.js";
+import "./editDeleteListener.js";
 
-// API.getJournalEntries().then(renderJournalEntries);
-document.querySelector("#submit").addEventListener("click", (event) => {
-  // let validate = validateForm();
-  // if (validate == false) {
-  // } else {
-  event.preventDefault();
-  let date = document.querySelector("#dateEntry").value;
-  let concept = document.querySelector("#conceptEntry").value;
-  let journalText = document.querySelector("#journalEntry").value;
-  let mood = document.querySelector("#moodEntry").value;
-  let newJournalEntry = buildJournalEntry.buildJournalEntry(
-    date,
-    concept,
-    journalText,
-    mood
-  );
+// Start of section for EventListener of EDIT and DELETE Journal Entry
+// const entryOutputContainer = document.querySelector(".entryLog");
+// entryOutputContainer.addEventListener("click", (event) => {
+//   if (event.target.id.startsWith("edit--")) {
+//     const entryID = event.target.id.split("--")[1];
+//     API.getJournalEntriesByID(entryID).then((entry) => {
+//       prepopulateForm(entry);
+//     });
+//   }
+//   if (event.target.id.startsWith("delete--")) {
+//     const entryID = event.target.id.split("--")[1];
+//     API.deleteEntry(entryID).then(getAndRender);
+//   }
+// });
+// End of section for EventListener of EDIT and DELETE Journal Entry
 
-  API.saveJournalEntry(newJournalEntry)
-    .then((data) => data.json())
-    .then((data) => {
-      API.getJournalEntries().then((data) => renderJournalEntries(data));
-    });
-});
-
-const entryOutputContainer = document.querySelector(".entryLog");
-entryOutputContainer.addEventListener("click", (event) => {
-  if (event.target.id.startsWith("delete--")) {
-    const entryID = event.target.id.split("--")[1];
-    API.deleteEntry(entryID).then(getAndRender);
-  }
-});
-
+// Functin to render to DOM
 function renderToDOM(htmlRep) {
   entryOutputContainer.innerHTML += htmlRep;
 }
+// -END of Function
 
+const entryOutputContainer = document.querySelector(".entryLog");
 function getAndRender() {
   entryOutputContainer.innerHTML = "";
   API.getJournalEntries().then((entries) => {
@@ -48,6 +39,7 @@ function getAndRender() {
       .forEach(renderToDOM);
   });
 }
+// Function --See All Journals--
 document.querySelector("#getAllJournals").addEventListener("click", (event) => {
   getAndRender();
 });
@@ -57,25 +49,30 @@ document
     entryOutputContainer.innerHTML = "";
   });
 
-export default getAndRender;
+// Edit Entries
 
-// function validateForm() {
-//   var x = document.forms["myForm"]["journalEntry"].value;
-//   if (x == "") {
-//     alert("Journal Entry must be filled out");
-//     return false;
-//   }
-// }
+function prepopulateForm(entry) {
+  formDate.value = entry.date;
+  formConcept.value = entry.concept;
+  formJournal.value = entry.journal;
+  formMood.value = entry.mood;
+  formEntryId.value = entry.id;
+}
 
-// add delete button to HTML representation with a delete--(songId) and delete_btn class
-// test^^
-// add click event listener to songs_container to listen for delete buttons
-// test^^
-// get song Id from button using split
-// test^^
+const formEntryId = document.getElementById("entryId");
+const formDate = document.getElementById("date");
+const formConcept = document.getElementById("concept");
+const formJournal = document.getElementById("journal");
+const formMood = document.getElementById("formMood");
 
-// add delete method to API module
-// call delete method in event listener and pass in song Id as argument
-// test^^
-// get all songs and re-render
-// test^^
+//Function To clear Form Values
+function clearForm() {
+  formDate.value = "";
+  formConcept.value = "";
+  formJournal.value = "";
+  formMood.value = "";
+  formEntryId.value = "";
+}
+
+//Elemtns to Export
+export default { getAndRender, clearForm };

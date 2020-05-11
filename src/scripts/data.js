@@ -1,8 +1,11 @@
-// Method to Get the data in entries.json
-
 const API = {
   getJournalEntries() {
     return fetch("http://localhost:3000/entries").then((response) =>
+      response.json()
+    );
+  },
+  getJournalEntriesByID(entryID) {
+    return fetch(`http://localhost:3000/entries/${entryID}`).then((response) =>
       response.json()
     );
   },
@@ -20,6 +23,15 @@ const API = {
     return fetch(`http://localhost:3000/entries/${entryID}`, {
       method: "DELETE",
     });
+  },
+  updateEntry(updatedEntryObject, id) {
+    return fetch(`http://localhost:3000/entries/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updatedEntryObject),
+    }).then((res) => res.json());
   },
 };
 
