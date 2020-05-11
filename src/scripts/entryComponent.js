@@ -9,6 +9,7 @@ const makeJournalEntryComponent = (entires) => {
 <div>Journal Entry: ${entires.journal}</div>
 <div>Mood of the day: ${entires.mood}</div>
 <button id="delete--${entires.id}" class="delete_btn">delete</button>
+<button id="edit--${entires.id}" class="edit_btn">edit</button>
 </div>`;
 };
 
@@ -19,4 +20,7 @@ const buildJournalEntry = (date, concept, journal, mood) => ({
   mood: mood,
 });
 
-export default { buildJournalEntry, makeJournalEntryComponent };
+export default {
+  buildJournalEntry,
+  makeJournalEntryComponent,
+};

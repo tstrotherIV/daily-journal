@@ -21,6 +21,7 @@ fieldset {
   margin-top: 15px;
   display: flex;
   justify-content: space-around;
+  max-width: 400px;
 }
 
 #submit {
@@ -44,6 +45,7 @@ fieldset {
   border: solid black 1px;
   background-color: white;
   box-shadow: 10px 10px 15px;
+  max-width: 400px;
   background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F564x%2Fe0%2Fec%2F79%2Fe0ec7907834967ab5b5d5464785627dc.jpg&f=1&nofb=1");
 }
 
@@ -51,4 +53,8 @@ fieldset {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+
+#edit_form {
+  margin-top: 15px;
 }
